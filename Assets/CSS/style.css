@@ -9,9 +9,15 @@ body {
     background: #02040a;
     color: #e8f7ff;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     scroll-behavior: smooth;
     transition: background 0.4s ease, color 0.4s ease;
+}
+
+main {
+    flex: 1;
 }
 
 body::before {
@@ -447,10 +453,20 @@ main {
 }
 
 .footer {
-    text-align: center;
-    padding: 24px 0 12px;
+    margin: 0 auto;
+    max-width: 1180px;
+    width: calc(100% - 32px);
+    padding: 18px 24px 24px;
     color: #7b99b0;
     border-top: 1px solid rgba(72, 210, 240, 0.12);
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
 }
 
 @media (max-width: 960px) {
