@@ -34,14 +34,25 @@
     if (form && message) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
+
             const name = form.elements.name.value.trim() || 'Guest';
-            message.textContent = `Thanks, ${name}! Your message has been sent.`;
+            const email = form.elements.email.value.trim();
+            const messageText = form.elements.message.value.trim();
+            const recipient = 'nafeezasnfs@gmail.com';
+            const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${messageText}`
+            );
+
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            message.textContent = `Thanks, ${name}! Your email app should open with your message ready to send.`;
             message.classList.add('visible');
             form.reset();
 
             setTimeout(() => {
                 message.classList.remove('visible');
-            }, 3500);
+            }, 5000);
         });
     }
 });

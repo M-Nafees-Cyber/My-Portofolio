@@ -337,6 +337,21 @@ main {
     color: #020b10;
     background: linear-gradient(135deg, #2ef6c4 0%, #75e7ff 100%);
     border-color: transparent;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.secondary-button {
+    background: linear-gradient(135deg, #6ec5ff 0%, #a88dff 100%);
+    color: #03111f;
 }
 
 .hero-image {
