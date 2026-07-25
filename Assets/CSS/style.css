@@ -4,10 +4,66 @@
     padding: 0;
 }
 
+/* Theme variables: default = Dark Theme per user palette */
+:root {
+    --bg: #0B0F19; /* Deep Slate */
+    --surface: #1E2640; /* Navy Gray */
+    --card: #1E2640;
+    --text: #F8FAFC; /* Crisp White */
+    --muted-text: rgba(248,250,252,0.78);
+    --accent: #00F2FE; /* Mint Green (cyan) */
+    --accent-2: #10B981; /* Mint Green (emerald) */
+    --nav-bg: rgba(11,15,25,0.96);
+    --nav-border: rgba(16,185,129,0.06);
+    --brand-bg: var(--surface);
+    --brand-text: var(--accent-2);
+    --button-text: #0B0F19;
+    --card-shadow: rgba(0,0,0,0.45);
+    --accent-bg: rgba(0,242,254,0.12);
+    --accent-2-bg: rgba(16,185,129,0.14);
+    --muted-bg: rgba(255,255,255,0.03);
+    --muted-border: rgba(255,255,255,0.06);
+    --accent-outline: rgba(16,185,129,0.18);
+    --bg-decor-1: rgba(39,255,201,0.15);
+    --bg-decor-2: rgba(82,184,255,0.12);
+    --large-shadow-color: rgba(0,0,0,0.25);
+    --overlay-bg: rgba(3,8,18,0.6);
+    --focus-outline: rgba(46,198,170,0.18);
+    --focus-shadow: rgba(46,198,170,0.08);
+}
+
+/* Light theme overrides (user palette) */
+.light-theme {
+    --bg: #F4F6F9; /* Ice Gray */
+    --surface: #FFFFFF; /* Pure White */
+    --card: #FFFFFF;
+    --text: #0F172A; /* Dark Ink */
+    --muted-text: rgba(15,23,42,0.72);
+    --accent: #059669; /* Secure Emerald */
+    --accent-2: #059669;
+    --nav-bg: rgba(244,246,249,0.98);
+    --nav-border: rgba(5,150,105,0.06);
+    --brand-bg: var(--surface);
+    --brand-text: var(--accent);
+    --button-text: #FFFFFF;
+    --card-shadow: rgba(15,23,42,0.06);
+    --accent-bg: rgba(5,150,105,0.12);
+    --accent-2-bg: rgba(5,150,105,0.14);
+    --muted-bg: rgba(15,23,42,0.03);
+    --muted-border: rgba(15,23,42,0.06);
+    --accent-outline: rgba(5,150,105,0.12);
+    --bg-decor-1: rgba(5,150,105,0.06);
+    --bg-decor-2: rgba(82,184,255,0.04);
+    --large-shadow-color: rgba(15,23,42,0.06);
+    --overlay-bg: rgba(15,23,42,0.6);
+    --focus-outline: rgba(5,150,105,0.12);
+    --focus-shadow: rgba(5,150,105,0.06);
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: #02040a;
-    color: #e8f7ff;
+    background: var(--bg);
+    color: var(--text);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,110 +80,12 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at top left, rgba(39, 255, 201, 0.15), transparent 30%),
-                radial-gradient(circle at bottom right, rgba(82, 184, 255, 0.12), transparent 25%);
+    background: radial-gradient(circle at top left, var(--bg-decor-1), transparent 30%),
+                radial-gradient(circle at bottom right, var(--bg-decor-2), transparent 25%);
     pointer-events: none;
     transition: background 0.4s ease;
 }
-
-body.light-theme {
-    background: linear-gradient(180deg, #f8fbff 0%, #dfe8f7 100%);
-    color: #0f1729;
-}
-
-body.light-theme::before {
-    background: radial-gradient(circle at top left, rgba(38, 134, 209, 0.12), transparent 32%),
-                radial-gradient(circle at bottom right, rgba(58, 105, 153, 0.12), transparent 30%);
-}
-
-body.light-theme .navbar-container {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom-color: rgba(38, 130, 190, 0.18);
-}
-
-body.light-theme .brand {
-    background: #e7f4ff;
-    color: #0f3f57;
-    border-color: rgba(74, 179, 223, 0.35);
-}
-
-body.light-theme .tab-button,
-body.light-theme .theme-button,
-body.light-theme .tab-link-button,
-body.light-theme .primary-button {
-    background: rgba(255, 255, 255, 0.92);
-    color: #0f1729;
-    border-color: rgba(74, 179, 223, 0.28);
-}
-
-body.light-theme .tab-button.active {
-    background: rgba(181, 224, 245, 0.35);
-}
-
-body.light-theme .live-time {
-    background: rgba(255, 255, 255, 0.95);
-    color: #214b61;
-    border-color: rgba(74, 179, 223, 0.2);
-}
-
-body.light-theme .tab-button:hover,
-body.light-theme .theme-button:hover,
-body.light-theme .primary-button:hover,
-body.light-theme .tab-link-button:hover {
-    background: rgba(74, 179, 223, 0.18);
-    box-shadow: 0 0 12px rgba(74, 179, 223, 0.18);
-}
-
-body.light-theme .overview-card,
-body.light-theme .info-card,
-body.light-theme .skill-card,
-body.light-theme .project-card,
-body.light-theme .contact-form,
-body.light-theme .contact-link,
-body.light-theme .code-card {
-    background: rgba(255, 255, 255, 0.94);
-    border-color: rgba(74, 179, 223, 0.16);
-    color: #0f1729;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-body.light-theme .overview-card h3,
-body.light-theme .info-card h3,
-body.light-theme .skill-card h3,
-body.light-theme .project-card h3,
-body.light-theme .section-heading h2,
-body.light-theme .hero-content h1 {
-    color: #0b3b56;
-}
-
-body.light-theme .overview-card p,
-body.light-theme .info-card p,
-body.light-theme .skill-card p,
-body.light-theme .project-card p,
-body.light-theme .hero-content p,
-body.light-theme .section-heading p,
-body.light-theme .contact-form label,
-body.light-theme .contact-form input,
-body.light-theme .contact-form textarea,
-body.light-theme .contact-link {
-    color: #314a5d;
-}
-
-body.light-theme .contact-form input,
-body.light-theme .contact-form textarea {
-    background: #f8fbff;
-    border-color: rgba(74, 179, 223, 0.22);
-}
-
-body.light-theme .status-chip {
-    background: rgba(74, 179, 223, 0.14);
-    color: #0f5c7e;
-}
-
-body.light-theme .footer {
-    color: #415766;
-    border-top-color: rgba(74, 179, 223, 0.12);
-}
+/* Deprecated light-theme specifics removed — color palette now driven by CSS variables above */
 
 img {
     max-width: 100%;
@@ -138,8 +96,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(3, 8, 18, 0.95);
-    border-bottom: 1px solid rgba(72, 210, 240, 0.18);
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
 }
 
 .nav_bar {
@@ -157,14 +115,13 @@ img {
 .menu-toggle {
     display: none;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid var(--muted-border);
     color: inherit;
     padding: 8px 10px;
     font-size: 1.25rem;
     border-radius: 8px;
     cursor: pointer;
 }
-
 /* Default: ensure tab-buttons visible on desktop */
 .tab-buttons { display: flex; }
 
@@ -196,10 +153,10 @@ img {
     .nav_bar.open .tab-buttons {
         max-height: 520px; /* allows slide-down */
         padding: 12px 0 10px;
-        box-shadow: 0 18px 44px rgba(2,8,18,0.62);
+        box-shadow: 0 18px 44px var(--card-shadow);
         border-radius: 12px;
-        background: linear-gradient(180deg, rgba(3,8,18,0.98), rgba(3,8,18,0.92));
-        border: 1px solid rgba(72,210,240,0.06);
+        background: var(--nav-bg);
+        border: 1px solid var(--nav-border);
     }
 
     .nav_meta,
@@ -254,9 +211,9 @@ img {
 }
 
 .brand {
-    background: #05101c;
-    border: 1px solid rgba(30, 211, 130, 0.35);
-    color: #78ffd1;
+    background: var(--brand-bg);
+    border: 1px solid var(--muted-border);
+    color: var(--brand-text);
     font-size: 1rem;
     font-weight: 700;
     padding: 12px 18px;
@@ -279,11 +236,11 @@ img {
 
 .live-time {
     font-size: 0.9rem;
-    color: #9fd7ff;
+    color: var(--accent);
     padding: 8px 12px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(72, 210, 240, 0.16);
+    background: var(--muted-bg);
+    border: 1px solid var(--muted-border);
 }
 
 .tab-button,
@@ -291,11 +248,11 @@ img {
 .tab-link-button,
 .primary-button {
     border-radius: 999px;
-    border: 1px solid rgba(67, 226, 210, 0.3);
-    background: rgba(9, 19, 33, 0.82);
-    color: #c9f7ff;
+    border: 1px solid var(--muted-border);
+    background: transparent;
+    color: var(--text);
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.18s ease, background 260ms ease, box-shadow 200ms ease;
 }
 
 .tab-button {
@@ -309,13 +266,13 @@ img {
 .theme-button:hover,
 .primary-button:hover,
 .tab-link-button:hover {
-    background: rgba(38, 210, 190, 0.18);
-    box-shadow: 0 0 22px rgba(38, 210, 190, 0.15);
+    background: var(--accent-bg);
+    box-shadow: 0 0 22px var(--accent-2-bg);
 }
 
 .tab-button.active {
-    background: rgba(38, 210, 190, 0.28);
-    border-color: rgba(78, 245, 212, 0.4);
+    background: var(--accent-2-bg);
+    border-color: var(--accent-2-bg);
 }
 
 .theme-button {
@@ -331,19 +288,19 @@ img {
 }
 
 .overview-card {
-    background: rgba(12, 20, 36, 0.95);
-    border: 1px solid rgba(45, 190, 230, 0.18);
+    background: var(--card);
+    border: 1px solid var(--muted-border);
     border-radius: 24px;
     padding: 24px;
 }
 
 .overview-card h3 {
     margin-bottom: 14px;
-    color: #b8fff2;
+    color: var(--accent-2);
 }
 
 .overview-card p {
-    color: #c7e5f3;
+    color: var(--muted-text);
 }
 
 .status-chip {
@@ -352,8 +309,8 @@ img {
     padding: 8px 14px;
     border-radius: 999px;
     font-size: 0.85rem;
-    background: rgba(66, 199, 184, 0.12);
-    color: #9ff7e8;
+    background: var(--accent-2-bg);
+    color: var(--accent-2);
 }
 
 .contact-links {
@@ -368,23 +325,22 @@ img {
     align-items: center;
     padding: 10px 16px;
     border-radius: 999px;
-    background: rgba(33, 55, 79, 0.92);
-    color: #9bf0ff;
+    background: var(--muted-bg);
+    color: var(--accent);
     text-decoration: none;
-    border: 1px solid rgba(59, 184, 223, 0.22);
+    border: 1px solid var(--muted-border);
 }
 
 .code-card {
-    background: rgba(3, 9, 18, 0.94);
-    border: 1px solid rgba(36, 146, 200, 0.18);
+    background: var(--surface);
+    border: 1px solid var(--muted-border);
     border-radius: 20px;
     padding: 22px;
     margin-top: 28px;
 }
-
 .code-card pre {
     margin: 0;
-    color: #7ef8fd;
+    color: var(--accent);
     font-family: 'Courier New', monospace;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -427,15 +383,15 @@ main {
 .hero-content p {
     max-width: 620px;
     margin-bottom: 28px;
-    color: #a2cfe1;
+    color: var(--muted-text);
 }
 
 .primary-button,
 .tab-link-button {
     padding: 14px 26px;
     font-weight: 700;
-    color: #020b10;
-    background: linear-gradient(135deg, #2ef6c4 0%, #75e7ff 100%);
+    color: var(--button-text);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
     border-color: transparent;
     text-decoration: none;
     display: inline-flex;
@@ -450,15 +406,25 @@ main {
 }
 
 .secondary-button {
-    background: linear-gradient(135deg, #6ec5ff 0%, #a88dff 100%);
-    color: #03111f;
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+    color: var(--button-text);
+}
+
+.primary-button {
+    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 180ms ease;
 }
 
 .hero-image {
     border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(56, 163, 178, 0.18);
+    box-shadow: 0 28px 90px var(--large-shadow-color);
+    border: 1px solid var(--muted-border);
 }
 
 .hero-image img {
@@ -471,12 +437,12 @@ main {
 .section-heading h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #d8ffff;
+    color: var(--text);
 }
 
 .section-heading p {
     max-width: 760px;
-    color: #8faec8;
+    color: var(--muted-text);
     margin-bottom: 10px;
 }
 
@@ -504,24 +470,24 @@ main {
 .skill-card,
 .project-card,
 .contact-form {
-    background: rgba(8, 15, 28, 0.9);
-    border: 1px solid rgba(50, 163, 191, 0.14);
+    background: var(--card);
+    border: 1px solid var(--muted-border);
     border-radius: 24px;
     padding: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 20px 60px var(--card-shadow);
 }
 
 .info-card h3,
 .skill-card h3,
 .project-card h3 {
     margin-bottom: 14px;
-    color: #8ef2d7;
+    color: var(--accent-2);
 }
 
 .info-card p,
 .skill-card p,
 .project-card p {
-    color: #c7dfee;
+    color: var(--muted-text);
 }
 
 .contact-section {
@@ -536,25 +502,33 @@ main {
 
 .contact-form label {
     font-weight: 700;
-    color: #d3f4ff;
+    color: var(--text);
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--muted-border);
     border-radius: 16px;
-    background: rgba(2, 8, 18, 0.95);
-    color: #eef4ff;
+    background: var(--surface);
+    color: var(--text);
     padding: 16px 18px;
     font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 160px;
+    max-height: 160px;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #35f4d0;
-    box-shadow: 0 0 0 3px rgba(53, 244, 208, 0.15);
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 3px var(--accent-2-bg);
 }
 
 /* Final override media rules to ensure mobile nav hides/shows correctly
@@ -602,7 +576,7 @@ main {
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid var(--muted-border);
     border-radius: 10px;
     transition: transform 200ms ease, box-shadow 200ms ease, background 150ms ease;
     -webkit-tap-highlight-color: transparent;
@@ -613,7 +587,7 @@ main {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: #c9f7ff;
+    background-color: var(--text);
     transition: background-color 180ms ease;
 }
 
@@ -624,7 +598,7 @@ main {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #c9f7ff;
+    background-color: var(--text);
     transition: transform 220ms ease, opacity 180ms ease, background-color 180ms ease;
 }
 
@@ -638,7 +612,7 @@ main {
 .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(3, 8, 18, 0.6);
+    background: var(--overlay-bg);
     z-index: 14;
     opacity: 0;
     visibility: hidden;
@@ -652,7 +626,7 @@ main {
 }
 
 .menu-toggle:active { transform: scale(0.98); }
-.menu-toggle:focus { outline: 2px solid rgba(46, 198, 170, 0.18); box-shadow: 0 4px 18px rgba(46,198,170,0.08); }
+.menu-toggle:focus { outline: 2px solid var(--accent-outline); box-shadow: 0 4px 18px var(--focus-shadow); }
 
 /* Ensure overlay sits behind sticky nav but above page */
 .navbar-container { z-index: 20; }
@@ -660,7 +634,7 @@ main {
 
 .form-message {
     opacity: 0;
-    color: #7af2b0;
+    color: var(--accent-2);
     transition: opacity 0.25s ease;
 }
 
@@ -673,8 +647,8 @@ main {
     max-width: 1180px;
     width: calc(100% - 32px);
     padding: 18px 24px 24px;
-    color: #7b99b0;
-    border-top: 1px solid rgba(72, 210, 240, 0.12);
+    color: var(--muted-text);
+    border-top: 1px solid var(--muted-border);
     margin-top: auto;
     text-align: center;
 }
