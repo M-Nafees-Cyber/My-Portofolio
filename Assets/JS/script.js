@@ -31,14 +31,35 @@
         });
     }
 
-    // Mobile menu toggle
+    // Mobile menu toggle with animated hamburger + overlay
     const menuToggle = document.getElementById('menu-toggle');
     const navBar = document.querySelector('.nav_bar');
+    const overlay = document.getElementById('nav-overlay');
 
     if (menuToggle && navBar) {
+        const closeMenu = () => {
+            navBar.classList.remove('open');
+            menuToggle.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (overlay) { overlay.hidden = true; overlay.classList.remove('open'); }
+        };
+
         menuToggle.addEventListener('click', () => {
             const isOpen = navBar.classList.toggle('open');
+            menuToggle.classList.toggle('open', isOpen);
             menuToggle.setAttribute('aria-expanded', String(isOpen));
+            if (overlay) { overlay.hidden = !isOpen; overlay.classList.toggle('open', isOpen); }
+        });
+
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        // Close menu on Escape or when resizing to desktop
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navBar.classList.contains('open')) closeMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) closeMenu();
         });
     }
 

@@ -12,7 +12,9 @@
     <header class="navbar-container">
         <nav class="nav_bar">
             <a class="brand" href="home.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
             <div class="tab-buttons">
                 <a class="tab-button active" aria-current="page" href="home.html">HOME</a>
                 <a class="tab-button" href="about.html">ABOUT</a>
@@ -26,6 +28,7 @@
             </div>
         </nav>
     </header>
+    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
     <main>
         <section class="hero-section">
