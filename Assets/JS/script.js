@@ -31,6 +31,17 @@
         });
     }
 
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navBar = document.querySelector('.nav_bar');
+
+    if (menuToggle && navBar) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navBar.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    }
+
     if (form && message) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();

@@ -153,6 +153,67 @@ img {
     padding: 18px 24px;
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: inherit;
+    padding: 8px 10px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* When nav is open on small screens show items */
+.nav_bar.open .tab-buttons {
+    display: flex;
+}
+
+/* Slight layout tweaks for medium/small screens */
+@media (max-width: 880px) {
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tab-buttons {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .nav_meta,
+    .nav-meta {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .nav_bar {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 28px 16px 48px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.6rem, 5vw, 2.4rem);
+    }
+
+    .primary-button,
+    .tab-button {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+}
+
 .brand {
     background: #05101c;
     border: 1px solid rgba(30, 211, 130, 0.35);
