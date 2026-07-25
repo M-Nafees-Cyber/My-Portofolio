@@ -518,6 +518,44 @@ main {
     box-shadow: 0 0 0 3px rgba(53, 244, 208, 0.15);
 }
 
+/* Final override media rules to ensure mobile nav hides/shows correctly
+   (placed at end so they override earlier non-media rules) */
+@media (max-width: 880px) {
+    .tab-buttons {
+        display: none !important;
+    }
+
+    .nav_bar.open .tab-buttons {
+        display: flex !important;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    .nav_bar.open .tab-buttons a,
+    .nav_bar.open .tab-buttons button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 14px;
+    }
+
+    .menu-toggle {
+        order: 2;
+        margin-left: 8px;
+    }
+
+    @keyframes navFadeIn {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav_bar.open .tab-buttons {
+        animation: navFadeIn 180ms ease;
+    }
+}
+
 .form-message {
     opacity: 0;
     color: #7af2b0;
