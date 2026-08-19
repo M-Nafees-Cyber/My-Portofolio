@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Field Reports — Mohamed Nazar Mohamed Nafees (LONEWOLF). Cybersecurity writeups, CTF walkthroughs, Linux terminal configs, and AI research logs.">
+  <title>Field Reports (Blog) | LONEWOLF — Mohamed Nafees</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section">
+    <div class="section-header">
+      <h1 class="section-title gradient-text">FIELD REPORTS</h1>
+      <p class="section-subtitle">Weekly writeups, CTF notes & learning logs</p>
+    </div>
+
+    <!-- Category Filter Bar (Task 3 Requirement) -->
+    <div class="blog-filters">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="ctf">CTF</button>
+      <button class="filter-btn" data-filter="linux">LINUX</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="security">SECURITY</button>
+    </div>
+
+    <!-- Blog Posts Grid (3 Columns Desktop, 1 Column Mobile) -->
+    <div class="blog-grid">
+
+      <!-- POST 1: MEOW -->
+      <div class="glass-card blog-card" data-category="ctf">
+        <div class="blog-card-meta">
+          <span class="badge badge-active">MEOW ✅</span>
+          <span>August 2026</span>
+        </div>
+        <h3 class="blog-card-title green-text">How I Pwned My First HTB Machine — MEOW</h3>
+        <p class="blog-card-excerpt">
+          My first real target on Hack The Box. A simple Telnet misconfiguration — but the process of finding it taught me more than any textbook...
+        </p>
+        <div class="blog-card-footer">
+          <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">CATEGORY: CTF</span>
+          <a href="#" class="project-link" data-post-id="meow">Read More →</a>
+        </div>
+      </div>
+
+      <!-- POST 2: OTW BANDIT -->
+      <div class="glass-card blog-card" data-category="ctf">
+        <div class="blog-card-meta">
+          <span class="badge badge-active">OTW 🏆</span>
+          <span>August 2026</span>
+        </div>
+        <h3 class="blog-card-title green-text">OTW Bandit Levels 0-11: What I Learned</h3>
+        <p class="blog-card-excerpt">
+          OverTheWire Bandit is where my Linux skills went from zero to operator. Here's every level broken down with the key commands and lessons learned...
+        </p>
+        <div class="blog-card-footer">
+          <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">CATEGORY: CTF</span>
+          <a href="#" class="project-link" data-post-id="otw">Read More →</a>
+        </div>
+      </div>
+
+      <!-- POST 3: KALI TERMINAL -->
+      <div class="glass-card blog-card" data-category="linux">
+        <div class="blog-card-meta">
+          <span class="badge badge-active">KALI 🐧</span>
+          <span>August 2026</span>
+        </div>
+        <h3 class="blog-card-title green-text">Building a Hacker Terminal on Kali Linux</h3>
+        <p class="blog-card-excerpt">
+          How I turned a default Kali install into a full operator station — custom terminal, Conky HUD, GRUB theme, and a war room welcome screen...
+        </p>
+        <div class="blog-card-footer">
+          <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">CATEGORY: LINUX</span>
+          <a href="#" class="project-link" data-post-id="kali">Read More →</a>
+        </div>
+      </div>
+
+      <!-- POST 4: PROJECT ZARA AI -->
+      <div class="glass-card blog-card" data-category="ai">
+        <div class="blog-card-meta">
+          <span class="badge badge-active">ZARA 🤖</span>
+          <span>August 2026</span>
+        </div>
+        <h3 class="blog-card-title green-text">What is Project ZARA? My Personal AI Journey</h3>
+        <p class="blog-card-excerpt">
+          I'm building my own AI assistant from scratch in Python. No cloud, no subscriptions — just me, my laptop, and a DO OR DIE attitude...
+        </p>
+        <div class="blog-card-footer">
+          <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">CATEGORY: AI</span>
+          <a href="#" class="project-link" data-post-id="zara">Read More →</a>
+        </div>
+      </div>
+
+      <!-- POST 5: SOC FUNDAMENTALS -->
+      <div class="glass-card blog-card" data-category="security">
+        <div class="blog-card-meta">
+          <span class="badge badge-active">SOC 🛡️</span>
+          <span>August 2026</span>
+        </div>
+        <h3 class="blog-card-title green-text">SOC Analyst Fundamentals: Incident Response & Threat Hunting</h3>
+        <p class="blog-card-excerpt">
+          Key takeaways from my ISC² Candidate journey and BSc Cybersecurity studies — analyzing logs, detection rules, and blue team mindset...
+        </p>
+        <div class="blog-card-footer">
+          <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">CATEGORY: SECURITY</span>
+          <a href="#" class="project-link" data-post-id="soc">Read More →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- More Posts Coming Soon Placeholder (Task 3 Requirement) -->
+    <div class="blog-placeholder-banner">
+      <span class="green-text">⚡ SYSTEM STATUS:</span> More posts coming soon... Stay tuned for new Hack The Box walkthroughs & threat analysis reports.
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

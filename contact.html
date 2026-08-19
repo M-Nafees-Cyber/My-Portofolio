@@ -1,77 +1,126 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - Contact</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Mohamed Nazar Mohamed Nafees (LONEWOLF) — Direct communication channel for cybersecurity roles, SOC internships, and CTF collaborations.">
+  <title>Contact | LONEWOLF — Mohamed Nafees</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="navbar-container">
-        <nav class="nav_bar">
-            <a class="brand" href="index.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-            <div class="tab-buttons">
-                <a class="tab-button" href="index.html">HOME</a>
-                <a class="tab-button" href="about.html">ABOUT</a>
-                <a class="tab-button" href="skills.html">SKILLS</a>
-                <a class="tab-button" href="projects.html">PROJECTS</a>
-                <a class="tab-button active" aria-current="page" href="contact.html">CONTACT</a>
-            </div>
-            <div class="nav-meta">
-                <span id="live-time" class="live-time"></span>
-                <button id="theme-toggle" class="theme-button" type="button">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
-    <main>
-        <div class="page-card">
-        <section class="contact-section">
-            <div class="section-heading">
-                <h2>Contact</h2>
-                <p>Feel free to reach out for       cybersecurity discussions, collaboration, or professional opportunities</p>
-            </div>
-            <div class="contact-links">
-                <a class="contact-link" href="mailto:nafeezasnfs@gmail.com">Email</a>
-                <a class="contact-link" href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="contact-link" href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-            <form id="contact-form" class="contact-form">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+  <!-- Page Header -->
+  <section class="section">
+    <div class="section-header">
+      <h1 class="section-title gradient-text">DIRECT COMMS</h1>
+      <p class="section-subtitle">Connect for SOC Opportunities, Research & CTF Collaborations</p>
+    </div>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write a message..." required></textarea>
+    <div class="contact-grid">
 
-                <button type="submit" class="primary-button">Send Message</button>
-                <p id="form-message" class="form-message"></p>
-            </form>
-        </section>
+      <!-- Left Column: Direct Links & Info -->
+      <div class="glass-card">
+        <h3 class="green-text" style="font-size: 1.3rem; margin-bottom: 1.5rem;">📡 Secure Communication Channels</h3>
+        
+        <a href="mailto:nafeezasnfs@gmail.com" class="contact-info-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">PRIMARY EMAIL</div>
+            <div style="font-weight: 600; color: #FFFFFF;">nafeezasnfs@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener" class="contact-info-card">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">LINKEDIN PROFILE</div>
+            <div style="font-weight: 600; color: #FFFFFF;">linkedin.com/in/nafees-nazar-575b88280</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener" class="contact-info-card">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <div class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">GITHUB REPOSITORIES</div>
+            <div style="font-weight: 600; color: #FFFFFF;">github.com/M-Nafees-Cyber</div>
+          </div>
+        </a>
+
+        <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener" class="contact-info-card">
+          <div class="contact-icon">🎯</div>
+          <div>
+            <div class="muted-text" style="font-family: var(--font-mono); font-size: 0.8rem;">HACK THE BOX</div>
+            <div style="font-weight: 600; color: #FFFFFF;">N4fees_WLF</div>
+          </div>
+        </a>
+
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border-light);">
+          <div class="muted-text" style="font-family: var(--font-mono); font-size: 0.85rem;">
+            📍 Location: London, UK / Kingston University London<br>
+            ⏱️ Response Time: &lt; 24 Hours
+          </div>
         </div>
-    </main>
+      </div>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <p>© 2026 Nafees Nazar. All Rights Reserved.</p>
-                <p>Aspiring SOC Analyst | Cybersecurity & Digital Forensics Student at Kingston University London</p>
-                <p><a href="mailto:nafeezasnfs@gmail.com">📧 nafeezasnfs@gmail.com</a>  |  
-                    <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>  |  
-                    <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
-        </div>
-    </footer>
+      <!-- Right Column: Interactive Form -->
+      <div class="glass-card">
+        <h3 class="green-text" style="font-size: 1.3rem; margin-bottom: 1.5rem;">💬 Transmit Message</h3>
 
-    <script src="./Assets/JS/script.js"></script>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted successfully! Mohamed will respond shortly.');">
+          <div class="form-group">
+            <label class="form-label">YOUR NAME / OPERATOR ALIAS</label>
+            <input type="text" class="form-input" placeholder="e.g., Alex Mercer" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS</label>
+            <input type="email" class="form-input" placeholder="e.g., alex@security.io" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">SUBJECT</label>
+            <input type="text" class="form-input" placeholder="e.g., SOC Internship Opportunity / CTF Team" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">ENCRYPTED MESSAGE BODY</label>
+            <textarea class="form-textarea" placeholder="Type your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">⚡ Transmit Signal</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

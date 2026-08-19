@@ -1,81 +1,183 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - Projects</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cybersecurity Projects — Mohamed Nazar Mohamed Nafees (LONEWOLF). Hack The Box machines, CTF labs, network packet inspection, and Python security tools.">
+  <title>Projects | LONEWOLF — Mohamed Nafees</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="navbar-container">
-        <nav class="nav_bar">
-            <a class="brand" href="index.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-            <div class="tab-buttons">
-                <a class="tab-button" href="index.html">HOME</a>
-                <a class="tab-button" href="about.html">ABOUT</a>
-                <a class="tab-button" href="skills.html">SKILLS</a>
-                <a class="tab-button active" aria-current="page" href="projects.html">PROJECTS</a>
-                <a class="tab-button" href="contact.html">CONTACT</a>
-            </div>
-            <div class="nav-meta">
-                <span id="live-time" class="live-time"></span>
-                <button id="theme-toggle" class="theme-button" type="button">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
-    <main>
-        <div class="page-card">
-        <section class="info-section">
-            <div class="section-heading">
-                <h2>Projects</h2>
-                <p>Practice work that supports cybersecurity learning and practical skills.</p>
-            </div>
-            <div class="project-grid">
-                <article class="project-card">
-                    <h3>Network Map</h3>
-                    <p>A personal Python-based AI assistant built for cybersecurity research, task automation, and learning support.</p>
-                </article>
-                <article class="project-card">
-                    <h3>Security Checklist</h3>
-                    <p>Building a virtual network environment for hands-on cybersecurity practice and CTF preparation.</p>
-                </article>
-                <article class="project-card">
-                    <h3>CW2 Portfolio</h3>
-                    <p>Professional employability portfolio developed for CI4450 Professional Environments 1 module at Kingston University.</p>
-                </article>
-                <article class="project-card">
-                    <h3>(ISC)² CC Study</h3>
-                    <p>Self-directed study toward the (ISC)² Certified in Cybersecurity (CC) certification.</p>
-                </article>
-                <article class="project-card">
-                    <h3>CTF Challenges</h3>
-                    <p>Preparing for Capture the Flag competitions through TryHackMe and HackTheBox platforms.</p>
-                </article>
-            </div>
-        </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section">
+    <div class="section-header">
+      <h1 class="section-title gradient-text">CYBERSECURITY PROJECTS</h1>
+      <p class="section-subtitle">Hands-on Labs, CTF Machine Walkthroughs & Security Tools</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT CARD 1 — HTB (EXACT TASK 2 SPECIFICATION) -->
+      <div class="glass-card project-card">
+        <div class="project-header">
+          <div>
+            <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">CTF / PENETRATION TESTING</span>
+            <h3 class="project-title green-text" style="margin-top: 4px;">Hack The Box — Starting Point</h3>
+          </div>
+          <span class="badge badge-active">ACTIVE</span>
         </div>
-    </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <p>© 2026 Nafees Nazar. All Rights Reserved.</p>
-                <p>Aspiring SOC Analyst | Cybersecurity & Digital Forensics Student at Kingston University London</p>
-                <p><a href="mailto:nafeezasnfs@gmail.com">📧 nafeezasnfs@gmail.com</a>  |  
-                    <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>  |  
-                    <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
+        <p class="project-desc">
+          Actively completing Hack The Box Starting Point machines — learning real-world penetration testing techniques including network scanning, service enumeration, and exploiting misconfigurations.
+        </p>
+
+        <div class="code-block"># Machines completed
+→ MEOW — nmap recon → Telnet → root no password
+→ FAWN — nmap recon → FTP anonymous login → flag
+→ Tools: nmap, telnet, ftp, openvpn
+→ HTB Username: N4fees_WLF</div>
+
+        <div class="tag-list" style="margin-bottom: 1.25rem;">
+          <span class="tag">HackTheBox</span>
+          <span class="tag">nmap</span>
+          <span class="tag">Telnet</span>
+          <span class="tag">FTP</span>
+          <span class="tag">Pentesting</span>
+          <span class="tag">Kali</span>
         </div>
-    </footer>
 
-    <script src="./Assets/JS/script.js"></script>
+        <div class="project-footer">
+          <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener" class="project-link">→ View HTB Profile</a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 2 — OTW BANDIT WARGAME -->
+      <div class="glass-card project-card">
+        <div class="project-header">
+          <div>
+            <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">WARGAME / LINUX SECURITY</span>
+            <h3 class="project-title green-text" style="margin-top: 4px;">OverTheWire Bandit (Levels 0-11)</h3>
+          </div>
+          <span class="badge badge-active">COMPLETED 11/34</span>
+        </div>
+
+        <p class="project-desc">
+          Practical Linux wargame challenges focusing on file system traversal, decoding SSH keys, hidden file extraction, Base64 & ROT13 decoding, and system privilege boundaries.
+        </p>
+
+        <div class="code-block"># Key Learned Commands & Concepts
+$ SSH port redirection & key handling
+$ find . -type f -size 1033c ! -executable
+$ sort | uniq -u (Deduplication)
+$ base64 -d & tr 'A-Za-z' 'N-ZA-Mn-za-m'</div>
+
+        <div class="tag-list" style="margin-bottom: 1.25rem;">
+          <span class="tag">OverTheWire</span>
+          <span class="tag">Linux CLI</span>
+          <span class="tag">SSH</span>
+          <span class="tag">Cryptography</span>
+          <span class="tag">Bash</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="blog.html" class="project-link" data-post-id="otw">→ Read Writeup Report</a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 3 — WIRESHARK NETWORK ANALYSIS -->
+      <div class="glass-card project-card">
+        <div class="project-header">
+          <div>
+            <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">BLUE TEAM / NETWORK FORENSICS</span>
+            <h3 class="project-title green-text" style="margin-top: 4px;">Wireshark Packet Analysis Lab</h3>
+          </div>
+          <span class="badge badge-active">COMPLETED</span>
+        </div>
+
+        <p class="project-desc">
+          Deep packet inspection of PCAP files to analyze TCP handshakes, detect unencrypted credential leakage in legacy protocols (HTTP, FTP, Telnet), and isolate suspicious DNS exfiltration requests.
+        </p>
+
+        <div class="code-block"># Display Filters & Inspection
+ip.addr == 192.168.1.100 && tcp.port == 80
+http.request.method == "POST"
+dns.flags.response == 0 (Query Tracking)</div>
+
+        <div class="tag-list" style="margin-bottom: 1.25rem;">
+          <span class="tag">Wireshark</span>
+          <span class="tag">PCAP</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Packet Filtering</span>
+          <span class="tag">SOC</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener" class="project-link">→ View GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 4 — PROJECT ZARA AI ASSISTANT -->
+      <div class="glass-card project-card">
+        <div class="project-header">
+          <div>
+            <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">AI / AUTOMATION</span>
+            <h3 class="project-title green-text" style="margin-top: 4px;">Project ZARA — Local Cyber AI Assistant</h3>
+          </div>
+          <span class="badge badge-active">IN DEVELOPMENT</span>
+        </div>
+
+        <p class="project-desc">
+          Custom Python-based personal AI assistant operating entirely offline. Built without third-party cloud APIs to assist in log parsing, Nmap XML output summarization, and terminal command reference.
+        </p>
+
+        <div class="code-block"># Architecture & Tech Stack
+Python 3.12 + llama-cpp-python
+Offline Quantized GGUF Model Execution
+Automated Threat Intel Summarizer Module</div>
+
+        <div class="tag-list" style="margin-bottom: 1.25rem;">
+          <span class="tag">Python</span>
+          <span class="tag">AI/LLM</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Security Intel</span>
+        </div>
+
+        <div class="project-footer">
+          <a href="blog.html" class="project-link" data-post-id="zara">→ Read ZARA Journey</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

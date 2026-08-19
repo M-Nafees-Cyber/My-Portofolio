@@ -1,85 +1,208 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - Skills</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical Skills & Certifications — Mohamed Nazar Mohamed Nafees (LONEWOLF). CTF achievements, HTB progress, OTW Bandit, and security skill matrix.">
+  <title>Skills & Certifications | LONEWOLF — Mohamed Nafees</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="navbar-container">
-        <nav class="nav_bar">
-            <a class="brand" href="index.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-            <div class="tab-buttons">
-                <a class="tab-button" href="index.html">HOME</a>
-                <a class="tab-button" href="about.html">ABOUT</a>
-                <a class="tab-button active" aria-current="page" href="skills.html">SKILLS</a>
-                <a class="tab-button" href="projects.html">PROJECTS</a>
-                <a class="tab-button" href="contact.html">CONTACT</a>
-            </div>
-            <div class="nav-meta">
-                <span id="live-time" class="live-time"></span>
-                <button id="theme-toggle" class="theme-button" type="button">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
-    <main>
-        <div class="page-card">
-        <section class="info-section">
-            <div class="section-heading">
-                <h2>Skills</h2>
-                <p>Practical tools and knowledge from the first semester curriculum.</p>
-            </div>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <h3>Network Basics</h3>
-                    <p>TCP/IP, DNS, firewalls, and secure network configuration fundamentals.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Linux Fundamentals</h3>
-                    <p>Kali Linux terminal commands, file permissions, and system navigation.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Cyber Hygiene</h3>
-                    <p>Strong passwords, MFA, software updates, and safe browsing practices.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Security Awareness</h3>
-                    <p>Identifying phishing, social engineering, malware types, and common attack vectors.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Virtual Lab Setup</h3>
-                    <p>Setting up VirtualBox environments for safe cybersecurity practice and learning.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Packet Analysis</h3>
-                    <p>Basic Python programming for automation and scripting tasks related to cybersecurity.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link active">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section">
+    <div class="section-header">
+      <h1 class="section-title gradient-text">SKILLS & CERTIFICATIONS</h1>
+      <p class="section-subtitle">Technical Competencies, CTF Progress & Practical Credentials</p>
+    </div>
+
+    <!-- Certifications & CTF Section (Task 4 Requirements) -->
+    <div style="margin-bottom: 3.5rem;">
+      <h2 class="green-text" style="font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">🏆 Certifications & CTF Platforms</h2>
+      
+      <div class="cert-card-grid">
+        
+        <div class="cert-item">
+          <span class="badge badge-active">OVERTHEWIRE</span>
+          <div style="font-size: 0.95rem; color: #FFFFFF; margin-top: 8px;">Bandit Wargame</div>
+          <div class="cert-val">11/34 LEVELS</div>
+          <div class="muted-text" style="font-size: 0.8rem; margin-top: 4px;">Linux CLI & Exploitation</div>
         </div>
-    </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <p>© 2026 Nafees Nazar. All Rights Reserved.</p>
-                <p>Aspiring SOC Analyst | Cybersecurity & Digital Forensics Student at Kingston University London</p>
-                <p><a href="mailto:nafeezasnfs@gmail.com">📧 nafeezasnfs@gmail.com</a>  |  
-                    <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>  |  
-                    <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
+        <div class="cert-item">
+          <span class="badge badge-active">HACK THE BOX</span>
+          <div style="font-size: 0.95rem; color: #FFFFFF; margin-top: 8px;">HTB Machines</div>
+          <div class="cert-val">2 MACHINES ✅</div>
+          <div class="muted-text" style="font-size: 0.8rem; margin-top: 4px;">Meow & Fawn Completed</div>
         </div>
-    </footer>
 
-    <script src="./Assets/JS/script.js"></script>
+        <div class="cert-item">
+          <span class="badge badge-active">HACK THE BOX</span>
+          <div style="font-size: 0.95rem; color: #FFFFFF; margin-top: 8px;">Starting Point Track</div>
+          <div class="cert-val">ACTIVE</div>
+          <div class="muted-text" style="font-size: 0.8rem; margin-top: 4px;">Penetration Testing Path</div>
+        </div>
+
+        <div class="cert-item">
+          <span class="badge badge-active">OFFICIAL CREDENTIAL</span>
+          <div style="font-size: 0.95rem; color: #FFFFFF; margin-top: 8px;">ISC² Candidate</div>
+          <div class="cert-val">CANDIDATE STATUS</div>
+          <div class="muted-text" style="font-size: 0.8rem; margin-top: 4px;">Certified in Cybersecurity (CC) Path</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Detailed Skill Matrix Grid -->
+    <div class="skills-grid">
+
+      <!-- Category 1: Network & Reconnaissance -->
+      <div class="glass-card">
+        <h3 class="skill-category-title">
+          <span>📡 Network Security & Recon</span>
+        </h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Nmap Service Scanning</span>
+            <span class="green-text">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Wireshark Packet Analysis</span>
+            <span class="green-text">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Telnet / FTP / OpenVPN Protocols</span>
+            <span class="green-text">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Subnetting & TCP/IP Inspection</span>
+            <span class="green-text">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Category 2: SOC & Incident Response -->
+      <div class="glass-card">
+        <h3 class="skill-category-title">
+          <span>🛡️ SOC & Threat Detection</span>
+        </h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Log Analysis (Syslog / Windows Event)</span>
+            <span class="green-text">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>SIEM Fundamentals (Splunk / Elastic)</span>
+            <span class="green-text">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Threat Hunting (MITRE ATT&CK)</span>
+            <span class="green-text">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Digital Forensics Artifact Handling</span>
+            <span class="green-text">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Category 3: OS & Scripting -->
+      <div class="glass-card">
+        <h3 class="skill-category-title">
+          <span>🐧 Operating Systems & Scripting</span>
+        </h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Linux CLI (Kali / Ubuntu / Debian)</span>
+            <span class="green-text">92%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Bash Shell Scripting</span>
+            <span class="green-text">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Python Security Scripting</span>
+            <span class="green-text">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Windows Security & Sysmon</span>
+            <span class="green-text">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

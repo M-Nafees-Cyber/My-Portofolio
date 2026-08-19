@@ -1,83 +1,172 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - Home</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohamed Nazar Mohamed Nafees (LONEWOLF) — Cybersecurity & Digital Forensics Portfolio. Aspiring SOC Analyst, CTF Player & Security Researcher.">
+  <title>LONEWOLF | Mohamed Nafees — Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="navbar-container">
-        <nav class="nav_bar">
-            <a class="brand" href="home.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-            <div class="tab-buttons">
-                <a class="tab-button active" aria-current="page" href="home.html">HOME</a>
-                <a class="tab-button" href="about.html">ABOUT</a>
-                <a class="tab-button" href="skills.html">SKILLS</a>
-                <a class="tab-button" href="projects.html">PROJECTS</a>
-                <a class="tab-button" href="contact.html">CONTACT</a>
-            </div>
-            <div class="nav-meta">
-                <span id="live-time" class="live-time"></span>
-                <button id="theme-toggle" class="theme-button" type="button">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
-    <main>
-        <div class="page-card">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Hello, I'm Nafees Nazar Aspiring SOC Analyst</h1>
-                <p>First-year BSc Cybersecurity & Digital Forensics student at Kingston University London, passionate about protecting digital environments.</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="primary-button">Contact Me</a>
-                    <a href="Assets/Docs/Nafees_Nazar_CV.docx" class="primary-button secondary-button" download>Download CV</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="Assets/IMG/hero.jpeg" alt="Cybersecurity hero image">
-            </div>
-        </section>
-        <section class="overview-grid">
-            <article class="overview-card">
-                <h3>Career Goals</h3>
-                <p>Becoming a SOC Analyst through academic excellence, self-directed learning, and industry certifications.</p>
-                <span class="status-chip">In Progress</span>
-            </article>
-            <article class="overview-card">
-                <h3>Tools & Technologies</h3>
-                <p>Kali Linux, Pyhton, VS Code, GitHub, and Security Fundamentals</p>
-                <span class="status-chip">Learning</span>
-            </article>
-            <article class="overview-card">
-                <h3>Certifications</h3>
-                <p>Currently pursuing (ISC)² Certified in Cybersecurity (CC) alongside BSc degree.</p>
-                <span class="status-chip">Level 1</span>
-            </article>
-        </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-grid">
+      
+      <!-- Left Column: Interactive Terminal Window -->
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">lone@operator: ~ (zsh)</span>
+          <span class="badge badge-active" style="font-size: 0.65rem;">ONLINE</span>
         </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <p>© 2026 Nafees Nazar. All Rights Reserved.</p>
-                <p>Aspiring SOC Analyst | Cybersecurity & Digital Forensics Student at Kingston University London</p>
-                <p><a href="mailto:nafeezasnfs@gmail.com">📧 nafeezasnfs@gmail.com</a>  |  
-                    <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>  |  
-                    <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
+        <div class="terminal-body" id="terminal-content">
+          <!-- Terminal script injects typewriter content here -->
         </div>
-    </footer>
+      </div>
 
-    <script src="./Assets/JS/script.js"></script>
+      <!-- Right Column: Hero Intro Content -->
+      <div class="hero-content">
+        <h2>// CALLSIGN: LONEWOLF</h2>
+        <h1 class="gradient-text">Nafees Nazar</h1>
+        <p class="hero-subtitle green-text">BSc (Hons) Cybersecurity & Digital Forensics Student</p>
+        <p class="hero-description">
+          Aspiring SOC Analyst & Security Researcher at <strong>Kingston University London</strong>. Dedicated to threat detection, incident response, network recon, and continuous CTF skill development.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">⚡ Explore Projects</a>
+          <a href="blog.html" class="btn btn-outline">📡 Field Reports</a>
+          <a href="contact.html" class="btn btn-secondary">Direct Contact</a>
+          <a href="Assets/Docs/Nafees_Nazar_CV.docx" class="btn btn-secondary" download>📄 Download CV</a>
+        </div>
+
+        <!-- Hero Stats Container -->
+        <div class="stats-container">
+          <div class="glass-card stat-card">
+            <div class="stat-number">11</div>
+            <div class="stat-label">OTW Levels</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">HTB Machines</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number" style="font-size: 1.6rem;">ISC²</div>
+            <div class="stat-label">Candidate</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Operational Focus Section -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title gradient-text">OPERATIONAL FOCUS</h2>
+      <p class="section-subtitle">Core competencies and security domain Specialization</p>
+    </div>
+
+    <div class="projects-grid">
+      
+      <div class="glass-card">
+        <div class="project-header">
+          <h3 class="project-title green-text">🛡️ SOC & Threat Analysis</h3>
+          <span class="badge badge-active">BLUE TEAM</span>
+        </div>
+        <p class="project-desc">
+          Monitoring network telemetry, analyzing Windows/Linux event logs, threat hunting, and understanding SIEM alert pipelines to detect malicious activity before escalation.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Log Analysis</span>
+          <span class="tag">Sysmon</span>
+          <span class="tag">SIEM</span>
+          <span class="tag">Incident Response</span>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <div class="project-header">
+          <h3 class="project-title green-text">🔍 Digital Forensics</h3>
+          <span class="badge badge-active">INVESTIGATION</span>
+        </div>
+        <p class="project-desc">
+          Reconstructing cyber attack vectors, memory dump analysis, network traffic packet extraction using Wireshark, and evidence preservation according to chain-of-custody standards.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Wireshark</span>
+          <span class="tag">Packet Capture</span>
+          <span class="tag">Chain of Custody</span>
+          <span class="tag">Memory Forensics</span>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <div class="project-header">
+          <h3 class="project-title green-text">🎯 CTF & Pentesting</h3>
+          <span class="badge badge-active">OFFENSIVE RECON</span>
+        </div>
+        <p class="project-desc">
+          Executing structured enumeration using Nmap, inspecting service misconfigurations (FTP/Telnet/SMB), and developing practical exploitation and privilege escalation skills.
+        </p>
+        <div class="tag-list">
+          <span class="tag">HackTheBox</span>
+          <span class="tag">OverTheWire</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">Kali Linux</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quick CTA Banner -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="glass-card" style="text-align: center; padding: 3rem 2rem;">
+      <h3 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Ready to collaborate or discuss SOC roles?</h3>
+      <p class="muted-text" style="max-width: 600px; margin: 0 auto 2rem auto;">
+        I am actively seeking SOC Analyst internships, entry-level security analyst roles, and cybersecurity research opportunities.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">✉️ Get In Touch</a>
+        <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener" class="btn btn-outline">🎯 HTB Profile: N4fees_WLF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

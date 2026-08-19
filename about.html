@@ -1,85 +1,131 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio - About</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Mohamed Nazar Mohamed Nafees (LONEWOLF) — BSc Cybersecurity & Digital Forensics Student at Kingston University London.">
+  <title>About | LONEWOLF — Mohamed Nafees</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="navbar-container">
-        <nav class="nav_bar">
-            <a class="brand" href="index.html">CyberSec 1st Sem</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-            <div class="tab-buttons">
-                <a class="tab-button" href="index.html">HOME</a>
-                <a class="tab-button active" aria-current="page" href="about.html">ABOUT</a>
-                <a class="tab-button" href="skills.html">SKILLS</a>
-                <a class="tab-button" href="projects.html">PROJECTS</a>
-                <a class="tab-button" href="contact.html">CONTACT</a>
-            </div>
-            <div class="nav-meta">
-                <span id="live-time" class="live-time"></span>
-                <button id="theme-toggle" class="theme-button" type="button">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <div id="nav-overlay" class="nav-overlay" hidden></div>
 
-    <main>
-        <div class="page-card">
-        <section class="info-section">
-            <div class="section-heading">
-                <h2>About Me</h2>
-                <p>First-year BSc (Hons) Cybersecurity & Digital Forensics student at Kingston University London. Passionate about technology, threat detection, and building a career in Security Operations.</p>
-            </div>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>My Goal</h3>
-                    <p>Start as a SOC Analyst, grow through industry certifications, and eventually found a Cybersecurity & AI company.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Interests</h3>
-                    <p>Cybersecurity, ethical hacking concepts, Python development, home lab setup, and CTF challenges.</p>
-                </div>
-            </div>
-        </section>
-        <section class="info-section">
-            <div class="section-heading">
-                <h2>Why Cybersecurity?</h2>
-                <p>My own computer was infected by a virus which sparked my curiosity about how systems are attacked and defended. That experience led me to pursue cybersecurity as a career to protect others.</p>
-            </div>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Learning Path</h3>
-                    <p>BSc Cybersecurity at Kingston University, (ISC)² CC certification, TryHackMe, and personal home lab practice.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Study Tools</h3>
-                    <p>Kali Linux, Python scripting, VS Code, GitHub, and virtual machine environments.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-bottom: 2rem;">
+    <div class="section-header">
+      <h1 class="section-title gradient-text">OPERATOR PROFILE</h1>
+      <p class="section-subtitle">Background, Academic Journey & Security Philosophy</p>
+    </div>
+
+    <div class="about-grid">
+      
+      <!-- Left Column: Profile Card -->
+      <div class="glass-card profile-box">
+        <div class="profile-avatar">🐺</div>
+        <h2 class="green-text" style="font-size: 1.4rem;">Mohamed Nafees</h2>
+        <p class="muted-text" style="font-family: var(--font-mono); font-size: 0.9rem;">[CALLSIGN: LONEWOLF]</p>
+        
+        <div style="margin-top: 1rem;">
+          <span class="badge badge-active">SOC ANALYST ASPIRANT</span>
         </div>
-    </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <p>© 2026 Nafees Nazar. All Rights Reserved.</p>
-                <p>Aspiring SOC Analyst | Cybersecurity & Digital Forensics Student at Kingston University London</p>
-                <p><a href="mailto:nafeezasnfs@gmail.com">📧 nafeezasnfs@gmail.com</a>  |  
-                    <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noreferrer">LinkedIn</a>  |  
-                    <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
+        <ul class="profile-meta-list">
+          <li class="profile-meta-item">
+            <span class="profile-meta-label">Full Name</span>
+            <span class="profile-meta-val">Mohamed Nazar Mohamed Nafees</span>
+          </li>
+          <li class="profile-meta-item">
+            <span class="profile-meta-label">University</span>
+            <span class="profile-meta-val">Kingston University London</span>
+          </li>
+          <li class="profile-meta-item">
+            <span class="profile-meta-label">Degree</span>
+            <span class="profile-meta-val">BSc (Hons) Cybersecurity & Digital Forensics</span>
+          </li>
+          <li class="profile-meta-item">
+            <span class="profile-meta-label">HTB Profile</span>
+            <span class="profile-meta-val"><a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener" class="green-text">N4fees_WLF</a></span>
+          </li>
+          <li class="profile-meta-item">
+            <span class="profile-meta-label">Status</span>
+            <span class="profile-meta-val green-text">ISC² Candidate</span>
+          </li>
+        </ul>
+
+        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 10px;">
+          <a href="contact.html" class="btn btn-primary" style="width: 100%;">Connect With Me</a>
+          <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">LinkedIn Profile</a>
         </div>
-    </footer>
+      </div>
 
-    <script src="./Assets/JS/script.js"></script>
+      <!-- Right Column: Biography & Background -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        
+        <div class="glass-card">
+          <h3 class="green-text" style="margin-bottom: 1rem;">💻 Biography & Mission</h3>
+          <p style="color: var(--text-main); margin-bottom: 1rem;">
+            I am a dedicated cybersecurity student currently pursuing my <strong>BSc (Hons) in Cybersecurity & Digital Forensics</strong> at <strong>Kingston University London</strong>. Operating under the callsign <strong>LONEWOLF</strong>, my focus centers on mastering the defensive mindset required for Security Operations Center (SOC) environments.
+          </p>
+          <p style="color: var(--text-muted);">
+            Cybersecurity is more than an academic pursuit for me — it's a discipline of continuous learning. From completing OverTheWire Bandit challenges to actively executing machine walkthroughs on Hack The Box, I constantly refine my practical skill set in network traffic analysis, vulnerability assessment, and threat hunting.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="green-text" style="margin-bottom: 1rem;">🎓 Academic Discipline</h3>
+          <p style="color: var(--text-main); margin-bottom: 1rem;">
+            My degree coursework at Kingston University provides rigorous theoretical and practical training in:
+          </p>
+          <ul style="color: var(--text-muted); margin-left: 1.25rem; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Digital Forensics & Evidence Handling:</strong> Investigating file system artifacts, memory dumps, and maintaining chain of custody.</li>
+            <li><strong>Network Security & Cryptography:</strong> Understanding TCP/IP protocol stack vulnerabilities, packet inspection, and encryption mechanisms.</li>
+            <li><strong>Ethical Hacking & Penetration Testing:</strong> Identifying service misconfigurations, web application vulnerabilities, and network security posture assessment.</li>
+            <li><strong>Information Security Governance:</strong> Risk assessment frameworks, compliance standards, and blue team incident handling.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="green-text" style="margin-bottom: 1rem;">🛠️ Personal Security Lab</h3>
+          <div class="code-block" style="margin-bottom: 0;">
+# LONEWOLF Operator Lab Topology
+├── Hypervisor: VirtualBox / VMware Workstation
+├── Primary OS: Kali Linux 2026 Rolling Edition
+├── Target Networks: Hack The Box (VPN Tunnel), OverTheWire
+├── Analysis Tools: Nmap, Wireshark, Tshark, Burp Suite, Metasploit
+└── Custom Dev: Python 3.12 (Automation Scripts & Project ZARA AI)</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/profile/N4fees_WLF" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
