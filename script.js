@@ -133,7 +133,7 @@ function initTypewriter() {
 
   const sequence = [
     { type: 'cmd', text: '$ whoami' },
-    { type: 'output', text: 'Mohamed Nafees' },
+    { type: 'output', text: 'Nafees Nazar' },
     { type: 'cmd', text: '$ cat mission.txt' },
     { type: 'output', text: 'Aspiring SOC Analyst & Security Researcher' },
     { type: 'cmd', text: '$ echo $STATUS' },
