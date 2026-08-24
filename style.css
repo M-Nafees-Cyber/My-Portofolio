@@ -548,6 +548,10 @@ h1, h2, h3, h4, h5, h6, .font-mono {
   height: 100%;
 }
 
+.project-card-wide {
+  grid-column: span 2;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -987,6 +991,10 @@ h1, h2, h3, h4, h5, h6, .font-mono {
   
   .blog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card-wide {
+    grid-column: auto;
   }
   
   .hamburger {

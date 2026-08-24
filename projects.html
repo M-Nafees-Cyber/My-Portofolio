@@ -108,7 +108,7 @@ $ base64 -d & tr 'A-Za-z' 'N-ZA-Mn-za-m'</div>
             <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">BLUE TEAM / NETWORK FORENSICS</span>
             <h3 class="project-title green-text" style="margin-top: 4px;">Wireshark Packet Analysis Lab</h3>
           </div>
-          <span class="badge badge-active">COMPLETED</span>
+          <span class="badge badge-active">LAB EXERCISE</span>
         </div>
 
         <p class="project-desc">
@@ -116,9 +116,9 @@ $ base64 -d & tr 'A-Za-z' 'N-ZA-Mn-za-m'</div>
         </p>
 
         <div class="code-block"># Display Filters & Inspection
-ip.addr == 192.168.1.100 && tcp.port == 80
-http.request.method == "POST"
-dns.flags.response == 0 (Query Tracking)</div>
+→ ip.addr == 192.168.1.100 && tcp.port == 80
+→ http.request.method == "POST"
+→ dns.flags.response == 0 (Query Tracking)</div>
 
         <div class="tag-list" style="margin-bottom: 1.25rem;">
           <span class="tag">Wireshark</span>
@@ -129,7 +129,7 @@ dns.flags.response == 0 (Query Tracking)</div>
         </div>
 
         <div class="project-footer">
-          <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener" class="project-link">→ View GitHub Repo</a>
+          <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener" class="project-link">→ → GitHub Profile</a>
         </div>
       </div>
 
@@ -144,13 +144,16 @@ dns.flags.response == 0 (Query Tracking)</div>
         </div>
 
         <p class="project-desc">
-          Custom Python-based personal AI assistant operating entirely offline. Built without third-party cloud APIs to assist in log parsing, Nmap XML output summarization, and terminal command reference.
+          Personal AI assistant built entirely in Python 3.12 — 
+          inspired by JARVIS. Designed for automation, cybersecurity 
+          research support, and daily operator tasks. Currently in 
+          active development on Windows 11.
         </p>
 
         <div class="code-block"># Architecture & Tech Stack
-Python 3.12 + llama-cpp-python
-Offline Quantized GGUF Model Execution
-Automated Threat Intel Summarizer Module</div>
+→ Python 3.12 — core language
+→ Voice I/O + command handling in development
+→ Modular architecture — private GitHub repo</div>
 
         <div class="tag-list" style="margin-bottom: 1.25rem;">
           <span class="tag">Python</span>
@@ -162,9 +165,40 @@ Automated Threat Intel Summarizer Module</div>
         <div class="project-footer">
           <a href="blog.html" class="project-link" data-post-id="zara">→ Read ZARA Journey</a>
         </div>
-      </div>
+      </diív>
 
     </div>
+
+      <!-- PROJECT CARD 5 — KALI OPERATOR STATION -->
+      <div class="glass-card project-card project-card-wide">
+        <div class="project-header">
+          <div>
+            <span class="muted-text" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">HOME LAB / LINUX</span>
+            <h3 class="project-title green-text" style="margin-top: 4px;">Kali Linux Operator Station Build</h3>
+          </div>
+          <span class="badge badge-active">COMPLETE</span>
+        </div>
+
+        <p class="project-desc">
+          Fully customized Kali Linux environment built from scratch on dual-boot alongside Windows 11. Configured a professional-grade cybersecurity workstation with custom terminal, CTF toolset, live system monitoring HUD, and automated war room setup.
+        </p>
+
+        <div class="code-block"># What was built
+→ ZSH + Oh-My-Zsh + Powerlevel10k terminal
+→ Conky live HUD — CPU, RAM, Network, TODO
+→ Stylish GRUB bootloader theme
+→ CTF tools — Gobuster, Burp Suite, tmux, netcat
+→ VS Code + Python 3.12 development environment</div>
+
+        <div class="tag-list" style="margin-bottom: 1.25rem;">
+          <span class="tag">Kali Linux</span>
+          <span class="tag">ZSH</span>
+          <span class="tag">Conky</span>
+          <span class="tag">Python 3.12</span>
+          <span class="tag">CTF Tools</span>
+          <span class="tag">Dual Boot</span>
+        </div>
+      </div>
   </section>
 
   <!-- Footer -->
