@@ -24,45 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
 /* -------------------------------------------------------------
 1. Animated Background Canvas (Particle Network Matrix)
 ------------------------------------------------------------- */
+/* -------------------------------------------------------------
+1. Animated / Static Background Canvas (Particle Network Matrix)
+------------------------------------------------------------- */
 function initParticleCanvas() {
-  const mobileBreakpoint = 768;
-  let animationFrameId = null;
-  let resizeFrameId = null;
-
-  function isDesktopViewport() {
-    return window.innerWidth >= mobileBreakpoint;
-  }
-
-  function destroyCanvas() {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-      animationFrameId = null;
-    }
-
-    const existingCanvas = document.getElementById('bg-canvas');
-    if (existingCanvas) {
-      existingCanvas.remove();
-    }
-  }
-
-  // 🛡️ CRITICAL MOBILE OPTIMIZATION: Disable heavy canvas particle loop on mobile screens to eliminate lag
-  if (!isDesktopViewport()) {
-    return;
-  }
-
   const canvas = document.createElement('canvas');
   canvas.id = 'bg-canvas';
   document.body.prepend(canvas);
 
   const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = window.innerHeight;
 
-  const particles = [];
-  const particleCount = 75; // Full desktop particle count
+  const isMobile = width < 768;
+  const particleCount = isMobile ? 30 : 75;
 
+  const particles = [];
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * width,
@@ -74,67 +51,70 @@ function initParticleCanvas() {
     });
   }
 
-  function resizeCanvas() {
-    if (!isDesktopViewport()) {
-      destroyCanvas();
-      return;
-    }
-
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  }
-
-  function render() {
-    if (!isDesktopViewport()) {
-      destroyCanvas();
-      return;
-    }
-
+  function drawFrame() {
     ctx.clearRect(0, 0, width, height);
 
-    // Draw particle connections
+    // Draw connections
+    const maxDist = isMobile ? 90 : 130;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 130) {
+        if (dist < maxDist) {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 255, 65, ${0.15 * (1 - dist / 130)})`;
-          ctx.lineWidth = 0.6;
+          ctx.strokeStyle = `rgba(0, 255, 65, ${0.12 * (1 - dist / maxDist)})`;
+          ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
     }
 
-    // Update and draw particles
+    // Draw particles
     particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
+      // If desktop, update positions
+      if (!isMobile) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      }
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(0, 255, 65, ${p.alpha})`;
-      ctx.shadowBlur = 8;
+      ctx.shadowBlur = isMobile ? 4 : 8;
       ctx.shadowColor = '#00FF41';
       ctx.fill();
     });
-
-    animationFrameId = requestAnimationFrame(render);
   }
 
-  window.addEventListener('resize', () => {
-    if (resizeFrameId) cancelAnimationFrame(resizeFrameId);
-    resizeFrameId = requestAnimationFrame(resizeCanvas);
-  });
+  drawFrame();
 
+  // If mobile, render once statically (zero CPU drain during scroll)
+  if (isMobile) {
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      drawFrame();
+    });
+    return;
+  }
+
+  // If desktop, run continuous 60fps animation loop
+  function render() {
+    drawFrame();
+    requestAnimationFrame(render);
+  }
   render();
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
 }
 
 /* -------------------------------------------------------------
