@@ -21,22 +21,47 @@ document.addEventListener('DOMContentLoaded', () => {
 /* -------------------------------------------------------------
    1. Animated Background Canvas (Particle Network Matrix)
 ------------------------------------------------------------- */
+/* -------------------------------------------------------------
+1. Animated Background Canvas (Particle Network Matrix)
+------------------------------------------------------------- */
 function initParticleCanvas() {
+  const mobileBreakpoint = 768;
+  let animationFrameId = null;
+  let resizeFrameId = null;
+
+  function isDesktopViewport() {
+    return window.innerWidth >= mobileBreakpoint;
+  }
+
+  function destroyCanvas() {
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
+
+    const existingCanvas = document.getElementById('bg-canvas');
+    if (existingCanvas) {
+      existingCanvas.remove();
+    }
+  }
+
+  // 🛡️ CRITICAL MOBILE OPTIMIZATION: Disable heavy canvas particle loop on mobile screens to eliminate lag
+  if (!isDesktopViewport()) {
+    return;
+  }
+
   const canvas = document.createElement('canvas');
   canvas.id = 'bg-canvas';
   document.body.prepend(canvas);
 
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = window.innerHeight;
 
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-
   const particles = [];
-  const particleCount = Math.floor(width < 768 ? 35 : 75);
+  const particleCount = 75; // Full desktop particle count
 
   for (let i = 0; i < particleCount; i++) {
     particles.push({
@@ -49,7 +74,22 @@ function initParticleCanvas() {
     });
   }
 
+  function resizeCanvas() {
+    if (!isDesktopViewport()) {
+      destroyCanvas();
+      return;
+    }
+
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+
   function render() {
+    if (!isDesktopViewport()) {
+      destroyCanvas();
+      return;
+    }
+
     ctx.clearRect(0, 0, width, height);
 
     // Draw particle connections
@@ -86,8 +126,13 @@ function initParticleCanvas() {
       ctx.fill();
     });
 
-    requestAnimationFrame(render);
+    animationFrameId = requestAnimationFrame(render);
   }
+
+  window.addEventListener('resize', () => {
+    if (resizeFrameId) cancelAnimationFrame(resizeFrameId);
+    resizeFrameId = requestAnimationFrame(resizeCanvas);
+  });
 
   render();
 }
