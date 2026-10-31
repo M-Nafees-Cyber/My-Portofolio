@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initBlogFilters();
   initBlogModals();
+  initArticleLikeButton();
 });
 
 /* -------------------------------------------------------------
@@ -234,6 +235,22 @@ function initBlogFilters() {
         }
       });
     });
+  });
+}
+
+function initArticleLikeButton() {
+  const articleLikeBtn = document.querySelector('.article-footer-actions .like-btn');
+  if (!articleLikeBtn) return;
+
+  const countEl = articleLikeBtn.querySelector('.count');
+  if (!countEl) return;
+
+  articleLikeBtn.addEventListener('click', () => {
+    const current = Number(countEl.textContent.trim()) || 0;
+    const next = current + 1;
+    countEl.textContent = String(next);
+    articleLikeBtn.classList.add('liked');
+    articleLikeBtn.setAttribute('aria-label', `Liked this report (${next})`);
   });
 }
 

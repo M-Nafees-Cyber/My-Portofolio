@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Episode 1 - Password security basics and passphrase strategy for everyday cyber awareness.">
+  <title>Episode 1 | LONEWOLF — Password Security Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      [LONEWOLF]
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+  </nav>
+
+  <main class="section blog-post-page">
+    <article class="blog-post-container">
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&auto=format&fit=crop" class="article-hero-img" alt="Password Security">
+
+      <header class="blog-post-header">
+        <div class="blog-post-breadcrumbs">
+          <a href="blog.html">← Back to Blog</a>
+          <span>/</span>
+          <span>Episode 1</span>
+        </div>
+
+        <span class="badge badge-active">EPISODE 1 • SECURITY</span>
+
+        <h1>Is Your Password Stopping a Hacker, or Handing Them the Keys?</h1>
+
+        <div class="blog-post-meta">
+          <span>Date: October 2026</span>
+          <span>By Captain LONEWOLF</span>
+          <span>Estimated Read Time: ~7 minutes</span>
+        </div>
+      </header>
+
+      <div class="blog-post-body">
+        <p class="lead-paragraph">
+          Welcome to Episode 1 of <strong>CYB3R SURVIV3R 141</strong>. From this series I’m going to teach everyone about 
+          everything a person should know — no, I should say, must know — about IT and cybersecurity terms and ideas to 
+          survive in this and upcoming technological era.
+        </p>
+
+        <p>
+          Whether you consider yourself a tech wizard or you struggle to take a print out from a printer that coudn't print 
+          you the print you gave it to print, this space is built for you. My goal throughout this series is to break down 
+          digital security and IT terms into clear, understandable lessons — no confusing formulas, no muluk muluk flook (by the way sorry VJS).
+          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXZubXg4MnEzbXBpeDg4dzF6OWFvYXM4bjJ5YnptYWNzZWMzNXF5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmfpjpAT2fJRK/giphy.gif" alt="Hacker Typing" class="article-gif" style="display:block; width:100%; max-width:420px; height:200px; object-fit:contain; margin:1rem auto; border-radius:12px;">
+        </p>
+
+        <p>
+          Today, we are taking a deep dive into the absolute front door of your digital existence: <strong>Your Password</strong>.
+        </p>
+
+        <div class="callout-box info">
+          💡 <strong>Real Talk:</strong> If you've ever spent 10 minutes trying to find the specifications of your phone, 
+          don't panic. This series is written in plain English, zero confusing math.
+        </div>
+
+        <section>
+          <h2>1. The Password Reality Check</h2>
+
+          <p>
+            Before we look at how security works under the hood, let’s conduct a quick personal audit. Think of the primary 
+            password you currently use for your main email, bank account, or favorite social media platforms.
+          </p>
+
+          <p>
+            Be honest — does it contain any of the following? <em>(just go ahead and put some ticks, i know u would lol..)</em>
+          </p>
+
+          <ul class="checklist">
+            <li><span class="check-box">✓</span><span>Your name, birthday, pet’s name, child’s name, or favorite sports team.</span></li>
+            <li><span class="check-box">✓</span><span>Simple keypad patterns like <code>123456</code>, <code>qwerty</code>, <code>111111</code>, or <code>password</code>.</span></li>
+            <li><span class="check-box">✓</span><span>Basic letter-to-symbol swaps, such as replacing <code>a</code> with <code>@</code>, <code>i</code> with <code>!</code>, or <code>o</code> with <code>0</code> (e.g., <code>P@ssw0rd</code>).</span></li>
+            <li><span class="check-box">✓</span><span>A single capitalized word combined with a current year and a single punctuation mark at the end (e.g., <code>Summer2026!</code>, <code>Welcome2025#</code>).</span></li>
+          </ul>
+
+          <p>
+            If you checked off even one box on that list, your password is significantly weaker than you think. 
+            <em>(i knew it dummy!!!)</em>
+          </p>
+
+          <div class="article-gif-wrapper">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzIzcmZlOXRseDE3b2FjY3dvN3N2Yncwc3M1amY1MGVmaDJlcTNteiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZBK7b4vHYyb0n70zJq/giphy.gif" alt="Hacker Typing" class="article-gif">
+            <p class="gif-caption"><em>Me at 3 A.M wondering how my neighbor gussed my strong wifi passwword which is 1 to 9 and end with a 0 and no space...</em></p>
+          </div>
+        </section>
+
+        <section>
+          <h3>How Password Cracking Actually Works</h3>
+
+          <p>
+            When people picture password hacking, they often imagine a mysterious figure in a dark room frantically typing 
+            away on a glowing keyboard, guessing letters one by one like a game of Hangman.
+          </p>
+
+          <p>
+            In the real world, hackers almost never guess passwords manually. Instead, they use specialized automated softwares 
+            running on modern, high-powered graphics cards (GPUs). These systems run three main types of automated attacks:
+          </p>
+
+          <ol>
+            <li><strong>Dictionary Attacks:</strong> The software runs through massive databases containing hundreds of millions of known words, leaked passwords, and common phrases in a matter of seconds.</li>
+            <li><strong>Rule-Based Attacks:</strong> The tool takes dictionary words and automatically applies every common transformation humans use — capitalizing the first letter, adding <code>2026!</code> to the end, or replacing <code>e</code> with <code>3</code>. If you thought changing <code>Password</code> to <code>P@ssw0rd!</code> made you clever, automated rules had already anticipated that decades ago.</li>
+            <li><strong>Brute-Force Attacks:</strong> The computer systematically tries every possible combination of letters, numbers, and symbols until it finds the match.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>2. Complexity vs. Length: The Great Password Myth</h2>
+
+          <p>
+            For over two decades, IT departments and website forms forced us to follow rigid password rules: 
+            <em>“Must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.”</em>
+          </p>
+
+          <p>
+            This rule set created a major usability disaster. It forced human beings to create short, bizarre, hard-to-remember 
+            strings like <code>Tr0ub4d0r&3</code>. Because these monstrosities were so difficult to memorize, people wrote them 
+            down on sticky notes under their keyboards or reused the same complex password across fifty different websites.
+          </p>
+
+          <div class="callout-box warning">
+            📝 <strong>The Sticky Note Reality:</strong> Old IT rules forced humans to invent passwords like "Tr0ub4d0r&3". Human 
+            brain response? We wrote it on a yellow sticky note and stuck it to the monitor. Security level: Zero.
+          </div>
+
+          <div class="article-gif-wrapper">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTIwNHZxNjF0Mm1zNDhzdDFrYjUxYWU4Y3g2ZzhsajRiczhoeWJkaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CAYVZA5NRb529kKQUc/giphy.gif" alt="Hacker Typing" class="article-gif">
+            <p class="gif-caption"><em>Hashcat after cracking "Admin2024!" in 0.003 seconds...</em></p>
+          </div>
+
+          <p>
+            Here is the fundamental truth of password mathematics:
+          </p>
+
+          <blockquote class="highlight-callout">
+            <p>Complexity is hard for humans to remember, but easy for computers to guess. Length is easy for humans to remember, 
+              and virtually impossible for computers to crack.</p>
+          </blockquote>
+
+          <div class="article-gif-wrapper">
+            <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Confused developer staring at code" class="article-gif">
+            <p class="gif-caption"><em>Arthur, seeing a "Password123" login attempt and immediately diagnosing: "This is an enterprise-grade 
+              failure mode, not a password."</em></p>
+          </div>
+
+          <div class="callout-box info">
+            <strong>🛠️ Arthur’s Technical Note:</strong> A password that can be typed while half asleep, guessed by a child, or remembered 
+            from a sticky note under the keyboard is not “security.” It’s just a "Fatality" move which You're going to use it against yourself Lol...
+              <div class="article-gif-wrapper">
+              <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTJzaWMxN2pjY2VscDhrYWgyZndya2Jtbmw3ZmQxYzVoY3p2MmJtdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/774uK11mxE3W0cjE8L/giphy.gif" alt="Hacker Typing" class="article-gif">
+          </div>
+
+          </div>
+
+          <h3>Why Length Wins: The Math Made Simple</h3>
+
+          <ul>
+            <li>An 8-character password using standard letters and numbers has a limited set pool of possibilities. A modern computer processing billions of guesses per second can run through every 8-character combination in a brief sitting.</li>
+            <li>Every single character you add to a password doesn’t just make it slightly harder — it multiplies the total number of combinations exponentially by the size of the character set.</li>
+          </ul>
+
+          <h3>Enter the “Passphrase”</h3>
+
+          <p>
+            Instead of forcing yourself to memorize a short, complex mess, switch to a <strong>Passphrase</strong>. A passphrase is created by combining 3 to 5 random, unrelated words into a long sequence separated by hyphens or spaces.
+          </p>
+
+          <ul class="example-list">
+            <li><span class="list-tag weak">Weak &amp; Complex</span> <code>P@ssw0rd2026!</code> — 13 characters, highly predictable pattern, cracked quickly</li>
+            <li><span class="list-tag strong">Strong Passphrase</span> <code>blue-coffee-running-elephant</code> — 27 characters, easy to visualize, astronomical combination space</li>
+          </ul>
+
+          <p>
+            Think about that passphrase for a moment. Your human brain can easily visualize a blue elephant drinking coffee while running down a track. A hacker’s automated tool, on the other hand, has to search across a multi-word dictionary matrix that requires immense computational energy and time to solve.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. The Hacker’s Clock: Crack-Time Breakdown</h2>
+
+          <p>
+            To visualize why length is so overwhelmingly dominant, look at how estimated crack times scale when automated tools try to brute-force different password styles running against modern consumer GPU hardware clusters:
+          </p>
+
+          <div class="terminal-box">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="title">bash - hashcat execution</span>
+            </div>
+            <pre><code>hashcat -m 1000 -a 0 hash.txt rockyou.txt</code></pre>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Password Format</th>
+                  <th>Example</th>
+                  <th>Total Length</th>
+                  <th>Estimated Time to Crack</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Numeric Only</td>
+                  <td><code>84729103</code></td>
+                  <td>8 characters</td>
+                  <td>Instantly</td>
+                </tr>
+                <tr>
+                  <td>Lowercase Letters</td>
+                  <td><code>cybersecurity</code></td>
+                  <td>13 characters</td>
+                  <td>A few minutes</td>
+                </tr>
+                <tr>
+                  <td>Short Standard Rules</td>
+                  <td><code>P@ssw0rd1!</code></td>
+                  <td>10 characters</td>
+                  <td>Under 2 minutes</td>
+                </tr>
+                <tr>
+                  <td>Random Complex</td>
+                  <td><code>k9#mP!2$QxL</code></td>
+                  <td>11 characters</td>
+                  <td>~3 Days</td>
+                </tr>
+                <tr>
+                  <td>Medium Passphrase</td>
+                  <td><code>sky-table-yellow-drive</code></td>
+                  <td>22 characters</td>
+                  <td>~200,000 Years</td>
+                </tr>
+                <tr>
+                  <td>Long Passphrase</td>
+                  <td><code>blue-coffee-running-elephant</code></td>
+                  <td>27 characters</td>
+                  <td>Trillions of Years</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="table-note">
+            Note: Crack times assume offline hash cracking using modern consumer GPU hardware clusters. As computational power advances, short passwords become vulnerable even faster.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. The Hard Truth: Why Even a 50-Character Password Isn’t Enough</h2>
+
+          <p>
+            Imagine you create a 50-character master passphrase that would take the fastest supercomputers in the world trillions of years to crack. You feel invincible.
+          </p>
+
+          <p>
+            Unfortunately, you can still be compromised in under five minutes. Why? Because modern cybercriminals rarely waste time brute-forcing long passwords when they can simply steal them.
+          </p>
+
+          <p>Here are the three most common ways strong passwords get bypassed:</p>
+
+          <ol>
+            <li><strong>Phishing &amp; Social Engineering:</strong> You receive an urgent email that appears to come from your bank, university portal, or streaming service stating: <em>“Suspicious activity detected! Click here immediately to verify your account.”</em> The link takes you to a fake website that looks identical to the real login page. You enter your passphrase, and within milliseconds, it is transmitted straight to the attacker’s database. Length cannot save you if you willingly hand it over.</li>
+            <li><strong>Corporate Data Breaches:</strong> You create an account on a small online shoe store in 2021 using your favorite strong passphrase. Two years later, that company’s backend database gets compromised because their security team left a database unencrypted. Hackers extract millions of user credentials and publish or sell them online.</li>
+            <li><strong>Password Reuse (Credential Stuffing):</strong> If you used that exact same passphrase for your online shoe store, your primary email account, your personal bank, and your social media profiles, attackers will run automated scripts (Credential Stuffing) to test those leaked login details across hundreds of popular platforms. One breached account on a minor website instantly unlocks your entire digital life.</li>
+          </ol>
+
+          <div class="callout-box info">
+            🚪 <strong>The Pizza Analogy:</strong> You can install a $1,000 vault door on your house. But it won't save you if you open it just because a stranger knocked and shouted, "Free Pizza!"
+          </div>
+        </section>
+
+        <section>
+          <h2>5. Summary &amp; Actionable Steps for Today</h2>
+
+          <p>
+            Improving your security doesn’t mean changing everything overnight, but taking three small steps today will place you ahead of 90% of typical internet users:
+          </p>
+
+          <ol>
+            <li><strong>Audit Your Core Accounts:</strong> Check your primary email, banking apps, and social media. If any of them use simple words, personal details, or predictable patterns, update them.</li>
+            <li><strong>Adopt Passphrases:</strong> Switch from short, complex strings to 4-word random passphrases (e.g., <code>guitar-sunset-battery-folder</code>).</li>
+            <li><strong>Stop Reusing Passwords:</strong> Treat every online account like an individual door requiring its own unique key. Never use the same passphrase on multiple sites.</li>
+          </ol>
+        </section>
+
+        <div class="callout-box warning">
+          <strong>⚠️ Key Lesson:</strong> If you reuse a password, the breach of one service can become a breach of your entire digital life.
+        </div>
+
+        <div class="callout-box info">
+          <strong>🧠 DFIR Tip:</strong> The earliest sign of a compromised identity is often repeated credential reuse across low-value and high-value services.
+        </div>
+
+        <section class="coming-up-box">
+          <h3>🔮 Coming Up in Episode 2...</h3>
+
+          <p>
+            How can you possibly remember 40 different 4-word passphrases without losing your mind or filling up a physical notebook? And how do you stop a hacker even if they successfully steal your password through a phishing site?
+          </p>
+
+          <p>
+            In Episode 2, we are tackling the two most powerful tools in personal cybersecurity:
+          </p>
+
+          <ul>
+            <li><strong>Password Managers:</strong> How to store, generate, and autofill unique passwords effortlessly.</li>
+            <li><strong>Two-Factor Authentication (2FA):</strong> Setting up a secondary physical shield so no one can access your accounts without your phone or hardware key.</li>
+          </ul>
+        </section>
+
+        <div class="glass-card blog-outro-card">
+          <div class="blog-card-meta outro-meta">
+            <span class="badge badge-active">OUTRO</span>
+            <span>See you soon</span>
+          </div>
+          <h3 class="blog-card-title green-text">🎮 Congratulations! You reached the end (for now!)</h3>
+          <p class="blog-card-excerpt outro-copy">
+            If you made it this far down without getting bored or just fast-scrolling, you’ve officially learned something valuable about how to stay secure on the internet with your passwords. Just hold the line for a few days—I’ll be back soon with another episode. Until then, bye and take care!
+          </p>
+          <p class="outro-signoff">Wolf out. 🐺</p>
+          <p class="outro-footer-note">(And if you're asking who "Wolf" is—don't worry, it's nobody mysterious. It's just me, the author! It's my callsign.)</p>
+          <div class="outro-actions">
+            <a href="contact.html" class="btn btn-primary">Contact the Author</a>
+          </div>
+        </div>
+
+        <div class="article-footer-actions">
+          <a href="blog.html" class="back-link">← Back to Field Reports</a>
+          <a href="episode-2.html" class="next-link">Next Episode →</a>
+          <button class="like-btn" type="button">❤️ Like this report (<span class="count">0</span>)</button>
+        </div>
+
+        <footer class="article-footer">
+          <p>
+            <strong>About the Author:</strong> I’m a 1st-year cybersecurity student building my portfolio and documenting my learning path. I write weekly plain-English guides to help non-technical and technical audiences navigate the digital world safely.
+          </p>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/M-Nafees-Cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nafees-nazar-575b88280" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://app.hackthebox.com/users/3832758" target="_blank" rel="noopener">HackTheBox</a>
+      <a href="mailto:nafeezasnfs@gmail.com">Email</a>
+    </div>
+    <p>© 2026 Mohamed Nazar Mohamed Nafees (LONEWOLF) — Kingston University London.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
