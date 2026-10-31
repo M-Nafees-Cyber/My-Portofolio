@@ -732,6 +732,33 @@ h1, h2, h3, h4, h5, h6, .font-mono {
   line-height: 1.7;
 }
 
+.outro-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.outro-actions .btn,
+.outro-actions .btn-primary,
+.outro-actions .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  background: rgba(0, 255, 65, 0.08);
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  color: var(--accent-green);
+  box-shadow: 0 0 18px rgba(0, 255, 65, 0.08);
+}
+
 .blog-placeholder-banner {
   margin-top: 4rem;
   text-align: center;
@@ -1192,71 +1219,6 @@ tbody tr:nth-child(even) {
   border-top: 1px solid var(--border-light);
 }
 
-.blog-outro-card {
-  margin: 2rem auto 1.5rem;
-  max-width: 860px;
-  text-align: center;
-  padding: 2rem 1.75rem;
-  border-color: rgba(0, 255, 65, 0.65);
-  box-shadow: 0 0 28px rgba(0, 255, 65, 0.12), inset 0 0 20px rgba(0, 255, 65, 0.04);
-  background: rgba(9, 20, 36, 0.78);
-}
-
-.outro-meta {
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.blog-outro-card .blog-card-title {
-  margin-bottom: 1rem;
-}
-
-.blog-outro-card .blog-card-excerpt {
-  margin: 0 auto 1rem;
-  max-width: 680px;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.outro-signoff {
-  margin: 1rem 0 0.5rem;
-  color: var(--accent-green);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.outro-footer-note {
-  margin: 0 auto;
-  max-width: 700px;
-  color: var(--text-muted);
-  font-size: 0.84rem;
-  line-height: 1.7;
-}
-
-.outro-actions {
-  margin-top: 1.25rem;
-  display: flex;
-  justify-content: center;
-}
-
-.outro-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 210px;
-  padding: 0.8rem 1.2rem;
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  text-decoration: none;
-  background: rgba(0, 255, 65, 0.08);
-  border: 1px solid rgba(0, 255, 65, 0.5);
-  color: var(--accent-green);
-  box-shadow: 0 0 18px rgba(0, 255, 65, 0.08);
-}
-
 @media (max-width: 768px) {
   .blog-post-container {
     padding: 1.5rem 1rem 2rem;
@@ -1606,9 +1568,18 @@ tbody tr:nth-child(even) {
   Purpose: reduce mobile scroll lag, remove unnecessary heavy blur effects, and improve GIF/image rendering on small screens.
 */
 
-/* --- MOBILE PERFORMANCE OPTIMIZATION & MEDIA FIXES --- */
+/* ==========================================================
+   MOBILE PERFORMANCE OPTIMIZATION & OUTRO STYLING
+   ========================================================== */
 @media (max-width: 768px) {
-  /* 1. Disable heavy GPU blur on mobile screens to restore smooth scrolling */
+  /* 1. Stop heavy infinite animations and transitions that drain mobile CPU */
+  *, *::before, *::after {
+    animation-iteration-count: 1 !important;
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+
+  /* 2. Disable heavy GPU blur and reduce heavy shadows on mobile */
   .navbar, 
   .blog-outro-card, 
   .terminal-box, 
@@ -1617,20 +1588,23 @@ tbody tr:nth-child(even) {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     background-color: rgba(5, 11, 30, 0.95) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
   }
 
-  /* 2. Reduce heavy glowing shadows on mobile devices */
   .blog-full-card,
-  .blog-outro-card,
-  .terminal-box,
   .skill-card {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
   }
 
-  /* 3. Enable smooth native touch scrolling */
+  /* 3. Enable smooth native touch scrolling & solid mobile background */
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    background: #030712 !important;
+    background-image: none !important;
   }
 }
 
@@ -1656,38 +1630,9 @@ tbody tr:nth-child(even) {
   border-radius: 8px;
 }
 
+/* --- Outro Component Styles --- */
 .outro-icon {
   font-size: 2.1rem;
   margin-bottom: 0.8rem;
   filter: drop-shadow(0 0 12px rgba(0, 255, 65, 0.35));
-}
-
-.outro-note,
-.outro-footer-note {
-  margin: 0 auto;
-  max-width: 700px;
-  color: var(--text-muted);
-  font-size: 0.84rem;
-  line-height: 1.7;
-}
-
-.outro-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.outro-actions .btn-primary,
-.outro-actions .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 210px;
-  padding: 0.8rem 1.2rem;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: all var(--transition-normal);
 }
